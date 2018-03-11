@@ -6,4 +6,4 @@
 - Loss function:
 - Cost function:
 - Gradient descent
-![img](./one step of gradient descent pseudo code.png)
+![img](one step of gradient descent pseudo code.png)
