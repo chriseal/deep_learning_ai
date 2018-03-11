@@ -6,4 +6,4 @@
 - Loss function:
 - Cost function:
 - Gradient descent
-![img](deep_learning_ai/week2/one step of gradient descent pseudo code.png)
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/one%20step%20of%20gradient%20descent%20pseudo%20code.png)
