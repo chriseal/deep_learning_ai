@@ -43,4 +43,5 @@
 - dZ = A - Y = [a1- y1 , a2 - y2, ... ]
 - db = 1/m \* np.sum(dZ)
 - dw = 1/m \* X \* dZ<sup>T</sup>
-
+- Gradient descent in logistic regression:
+  - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/vectorized_gradient_descent_logistic_regression.png)
