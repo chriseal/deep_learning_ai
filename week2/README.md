@@ -28,4 +28,19 @@
 
 ### Vectorizing Logistic Regression
 
-- 
+- remember to define X's shape as (columns, rows) (i.e. transposed from standard sheet)
+- w(sup)t(/sup)\*X+[b b ... b]
+  - b is 1 x m size
+  - 1 x n_x \* n_x x m
+  - = [ w<sup>t</sup>\*x<sup>(1)</sup> + w<sup>t</sup>\*x<sup>(2)</sup> + ... + w<sup>t</sup>\*x<sup>(n)</sup> ] + [ b b ... b]
+  - Z = np.dot(x.T, x) + b  # b (1,1)
+  - Z is 1 x m matrix that contains the loss for each row 
+  - Cost / A = sigmoid(Z)
+  
+### Vectorizing Logistic Regression's Gradient Output
+
+- A (1 x m); Y (1 x m)
+- dZ = A - Y = [a1- y1 , a2 - y2, ... ]
+- db = 1/m \* np.sum(dZ)
+- dw = 1/m \* X \* dZ<sup>T</sup>
+
