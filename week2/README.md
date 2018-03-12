@@ -73,3 +73,12 @@
 - (m, n) +-\*/ (1, n) <= python copies (1, n) m times (into (m, n)) and applies it elementwise
 - (m, n) +-\*/ (m, 1) <= python copies (1, n) m times (into (m, n)) and applies it elementwise
 - (m, 1) \* Real_num <= copies Real_num m times
+
+### tips and tricks to reduce errors with python/numpy vectors
+
+- avoid vector shape (m, ); Rank 1 array
+  - instead a = np.random.randn(5, 1) 
+  - column vector: (m, 1)
+  - row vector: (1, n)
+- add in assertions for shape
+- a = a.reshape((5,1))
