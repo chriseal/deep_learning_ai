@@ -2,12 +2,29 @@
 
 ## Logistic Regression as a Neural Network
 
+### Logistic Regression Gradient Descent - one row
+
+- "da" variable is dL(a,y)/da (derivative of Loss function with respect to predicted value); a = y<sup>^</sup>
+  - -(y/a) + (1-y)/(1-a)
+- "dz" variable is dL(a,y)/dz
+  - dz = a - y = dL/da\*da/dz
+- dL/dw_1 = "dw_1" = x_1 \* dz, dL/dw_2 = "dw_2" = x_2 \* dz
+  - w_1 := w_1 - alpha \* dw_1; w_2 := w_2 - alpha \* dw_2; 
+- db = dz
+  - b := b - alpha \* db
+  
+### Logistic Regression Gradient Descent - m training examples
+
 - Prediction formula:
-- Loss function:
-- Cost function:
+  - y<sup>^</sup> = sigmoid(w<sup>T</sup>\*x + b)
+  - sigmoid = 1 / (1 + e<sup>-z</sup>)
+- Loss (error) function: applied to just a single training example
+  - squared error is non-convex, so...
+  - L(y<sup>^</sup>, y) = - ( y \* log y<sup>^</sup> + (1 - y) \* log(1 - y<sup>^</sup>) )
+- Cost function: cost of parameters (all rows)
+  - J(w, b) = 1/m * sum(L over all rows) = -1/m * sum_over_m( y_i \* log y_i<sup>^</sup> + (1 - y_i) \* log(1 - y_i<sup>^</sup>)
 - Gradient descent
 ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/one%20step%20of%20gradient%20descent%20pseudo%20code.png)
-
 
 ## Vectorization
 
@@ -43,4 +60,9 @@
 - dZ = A - Y = [a1- y1 , a2 - y2, ... ]
 - db = 1/m \* np.sum(dZ)
 - dw = 1/m \* X \* dZ<sup>T</sup>
+- Gradient descent in logistic regression:
+  - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/vectorized_gradient_descent_logistic_regression.png)
 
+### Broadcasting
+
+- 
