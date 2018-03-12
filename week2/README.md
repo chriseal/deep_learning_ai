@@ -82,3 +82,14 @@
   - row vector: (1, n)
 - add in assertions for shape
 - a = a.reshape((5,1))
+
+### Jupyter/iPython notebooks
+
+- Run cell: Shift + Enter <- execute code block
+- Kernel -> restart ; if any issues
+
+### Explanation of Logistic Regression Cost Function
+
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/logistic_cost_function_explanation.png)
+- add in log and keep interpretation the same
+- by minimizing cost, we're really carrying out maximum likelihood estimation
