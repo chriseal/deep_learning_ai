@@ -65,4 +65,11 @@
 
 ### Broadcasting
 
-- 
+- .reshape is constant time (very fast)
+- (m, n) + (1, n) 
+  - python copies (1,n) m times -> size ends up as (m, n)
+- (m, n) + (m, 1)
+  - python copies (m, 1) n times -> size ends up as (m, n)
+- (m, n) +-\*/ (1, n) <= python copies (1, n) m times (into (m, n)) and applies it elementwise
+- (m, n) +-\*/ (m, 1) <= python copies (1, n) m times (into (m, n)) and applies it elementwise
+- (m, 1) \* Real_num <= copies Real_num m times
