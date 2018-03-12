@@ -65,4 +65,31 @@
 
 ### Broadcasting
 
-- 
+- .reshape is constant time (very fast)
+- (m, n) + (1, n) 
+  - python copies (1,n) m times -> size ends up as (m, n)
+- (m, n) + (m, 1)
+  - python copies (m, 1) n times -> size ends up as (m, n)
+- (m, n) +-\*/ (1, n) <= python copies (1, n) m times (into (m, n)) and applies it elementwise
+- (m, n) +-\*/ (m, 1) <= python copies (1, n) m times (into (m, n)) and applies it elementwise
+- (m, 1) \* Real_num <= copies Real_num m times
+
+### tips and tricks to reduce errors with python/numpy vectors
+
+- avoid vector shape (m, ); Rank 1 array
+  - instead a = np.random.randn(5, 1) 
+  - column vector: (m, 1)
+  - row vector: (1, n)
+- add in assertions for shape
+- a = a.reshape((5,1))
+
+### Jupyter/iPython notebooks
+
+- Run cell: Shift + Enter <- execute code block
+- Kernel -> restart ; if any issues
+
+### Explanation of Logistic Regression Cost Function
+
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/logistic_cost_function_explanation.png)
+- add in log and keep interpretation the same
+- by minimizing cost, we're really carrying out maximum likelihood estimation
