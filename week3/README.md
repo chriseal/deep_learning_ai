@@ -37,5 +37,11 @@
 - Leaky ReLU
   - a = max(0.01\*z, z) <- could try different slopes at < 0 (0.01 here)
 - test different choices and see how they perform (not one obvious choice across all problems)
-  
+
+## Why you need non-linear activation functions
+
+- if you use linear activation functions, then the model is just outputting a linear function of the input
+- if you're conducting regression, then the output layer will probably have a linear activation function (e.g. predicting housing prices... actually, a ReLU would actually make some sense, because housing prices cannot be negative)
+
+
   
