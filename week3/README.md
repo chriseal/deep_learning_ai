@@ -8,8 +8,8 @@
 
 ## Computing a neural network's output - Single training example
 
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/neural_network_matrices.png)
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/matrix_definitions.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week3/neural_network_matrices.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week3/matrix_definitions.png)
 - NN in four lines of code
 
 ## Computing a neural network's output - Multiple training examples
@@ -18,7 +18,7 @@
 - for X, Z, and A...
   - horizontally: training example index
   - vertically: node index (from top to bottom)
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/multiple_training_examples.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week3/multiple_training_examples.png)
 
 ## Activation functions
 
