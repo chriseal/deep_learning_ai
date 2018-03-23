@@ -43,5 +43,22 @@
 - if you use linear activation functions, then the model is just outputting a linear function of the input
 - if you're conducting regression, then the output layer will probably have a linear activation function (e.g. predicting housing prices... actually, a ReLU would actually make some sense, because housing prices cannot be negative)
 
+## Derivations of activation functions
+
+### Derivative of Sigmoid function:
+
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week3/derivative_of_sigmoid.png)
+- shorthand for derivative of g(z) ==> g'(z)
+- slope of sigmoid is: sigmoid(z)\*(1-sigmoid(z))
+  
+### Derivative of tanh activation function
+
+- = 1 - tanh(z)^2
+
+### ReLU and Leaky ReLU
+
+- ReLU: g'(z) = 0 if z < 0; 1 if z >= 0;
+- Leaky ReLU: g'(z) = 0.01 if z < 0; 1 if z >= 0;
+
 
   
