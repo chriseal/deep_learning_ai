@@ -60,5 +60,16 @@
 - ReLU: g'(z) = 0 if z < 0; 1 if z >= 0;
 - Leaky ReLU: g'(z) = 0.01 if z < 0; 1 if z >= 0;
 
+### Gradient Descent for Neural Networks
 
+- dimensions:
+  - given Parameters: 
+    - w<sup>[1]</sup>, b<sup>[1]</sup>; w<sup>[2]</sup>, b<sup>[2]</sup>
+  - and given layers: n<sup>[0]</sup> (input features), n<sup>[1]</sup> (hidden layer), n<sup>[2]</sup> (output layer, e.g. = 1)
+  - Parameters:
+    - w<sup>[1]</sup>: 
+    - b<sup>[1]</sup>:
+    - w<sup>[2]</sup>:
+    - b<sup>[2]</sup>:
+  
   
