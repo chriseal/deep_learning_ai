@@ -66,10 +66,15 @@
   - given Parameters: 
     - w<sup>[1]</sup>, b<sup>[1]</sup>; w<sup>[2]</sup>, b<sup>[2]</sup>
   - and given layers: n<sup>[0]</sup> (input features), n<sup>[1]</sup> (hidden layer), n<sup>[2]</sup> (output layer, e.g. = 1)
-  - Parameters:
-    - w<sup>[1]</sup>: 
-    - b<sup>[1]</sup>:
-    - w<sup>[2]</sup>:
-    - b<sup>[2]</sup>:
+  - Dimensions of parameters:
+    - w<sup>[1]</sup>: (n[1], n[0])
+    - b<sup>[1]</sup>: (n[1], 1)
+    - w<sup>[2]</sup>: (n[2], n[1])
+    - b<sup>[2]</sup>: (n[2], 1)
+- initialize parameters randomly
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/week3/gradient_descent_dimensions.png)
+- Formulaes for computing derivatives:
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/week3/formulas_for_computing_derivatives.png)
+
   
   
