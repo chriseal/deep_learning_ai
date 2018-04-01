@@ -83,3 +83,13 @@
 
 ### Randomized Initialization
 
+- initializing bias terms to 0 actually is okay
+- but initializing W's to 0 could be a problem
+- hidden units are computing exactly the same function (Symmetric), so when you perform the weight update, all updates will be the same
+- W<sup>1</sup> initialized as np.random.randn((2,2)) * 0.01 
+  - need to initialize to small random numbers, especially if we're using tanh or sigmoid activation functions
+  - if doing binary classification and output is a logistic function, this could still effect your result even if using ReLU
+  - if very deep network, might want to choose a number other than 0.01
+- b<sup>1</sup> initialized as np.zero((2,1))
+-
+
