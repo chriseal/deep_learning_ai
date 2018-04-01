@@ -76,5 +76,10 @@
 - Formulaes for computing derivatives:
 ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week3/formulas_for_computing_derivatives.png)
 
-  
-  
+### Backpropogation intuition  
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/week3/logistic_regression_backprop_formula.png)
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/week3/backprop2lyrRaw.png)
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/week3/backprop2lyrClean.png)
+
+### Randomized Initialization
+
