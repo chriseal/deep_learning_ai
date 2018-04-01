@@ -91,5 +91,3 @@
   - if doing binary classification and output is a logistic function, this could still effect your result even if using ReLU
   - if very deep network, might want to choose a number other than 0.01
 - b<sup>1</sup> initialized as np.zero((2,1))
--
-
