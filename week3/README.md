@@ -91,3 +91,7 @@
   - if doing binary classification and output is a logistic function, this could still effect your result even if using ReLU
   - if very deep network, might want to choose a number other than 0.01
 - b<sup>1</sup> initialized as np.zero((2,1))
+
+## Heros of Deep Learning with Ian Goodfellow
+
+- created GANs, came home from a bar and coded first one at midnight after realizing how to do it by arguing with a friend
