@@ -10,4 +10,7 @@
 
 ## Debugging: Dimensions
 
+- one training example
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week4/dimensions_one_training_example.png)
+- vectorized example
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week4/vectorized_implementation.png)
