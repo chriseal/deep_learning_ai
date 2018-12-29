@@ -9,10 +9,10 @@
 - "dz" variable is dL(a,y)/dz
   - dz = a - y = dL/da\*da/dz
 - dL/dw_1 = "dw_1" = x_1 \* dz, dL/dw_2 = "dw_2" = x_2 \* dz
-  - w_1 := w_1 - alpha \* dw_1; w_2 := w_2 - alpha \* dw_2; 
+  - w_1 := w_1 - alpha \* dw_1; w_2 := w_2 - alpha \* dw_2;
 - db = dz
   - b := b - alpha \* db
-  
+
 ### Logistic Regression Gradient Descent - m training examples
 
 - Prediction formula:
@@ -24,7 +24,7 @@
 - Cost function: cost of parameters (all rows)
   - J(w, b) = 1/m * sum(L over all rows) = -1/m * sum_over_m( y_i \* log y_i<sup>^</sup> + (1 - y_i) \* log(1 - y_i<sup>^</sup>)
 - Gradient descent
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/one%20step%20of%20gradient%20descent%20pseudo%20code.png)
+![img](https://github.com/chriseal/deep_learning_ai/1_NeuralNetworksAndDeepLearning/blob/master/week2/one%20step%20of%20gradient%20descent%20pseudo%20code.png)
 
 ## Vectorization
 
@@ -32,7 +32,7 @@
 - np.dot(w,x) is w<sup>t</sup>\*x, but much faster
 - both GPU and CPU have parallelization instructions
   - SIMD instructions: single instruction multiple data
-- vectorization allows for much easier parallelization 
+- vectorization allows for much easier parallelization
 - whenever possible, avoid explicit for loops!
 
 ### more vectorization examples
@@ -51,9 +51,9 @@
   - 1 x n_x \* n_x x m
   - = [ w<sup>t</sup>\*x<sup>(1)</sup> + w<sup>t</sup>\*x<sup>(2)</sup> + ... + w<sup>t</sup>\*x<sup>(n)</sup> ] + [ b b ... b]
   - Z = np.dot(x.T, x) + b  # b (1,1)
-  - Z is 1 x m matrix that contains the loss for each row 
+  - Z is 1 x m matrix that contains the loss for each row
   - Cost / A = sigmoid(Z)
-  
+
 ### Vectorizing Logistic Regression's Gradient Output
 
 - A (1 x m); Y (1 x m)
@@ -61,12 +61,12 @@
 - db = 1/m \* np.sum(dZ)
 - dw = 1/m \* X \* dZ<sup>T</sup>
 - Gradient descent in logistic regression:
-  - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/vectorized_gradient_descent_logistic_regression.png)
+  - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/1_NeuralNetworksAndDeepLearning/week2/vectorized_gradient_descent_logistic_regression.png)
 
 ### Broadcasting
 
 - .reshape is constant time (very fast)
-- (m, n) + (1, n) 
+- (m, n) + (1, n)
   - python copies (1,n) m times -> size ends up as (m, n)
 - (m, n) + (m, 1)
   - python copies (m, 1) n times -> size ends up as (m, n)
@@ -77,7 +77,7 @@
 ### tips and tricks to reduce errors with python/numpy vectors
 
 - avoid vector shape (m, ); Rank 1 array
-  - instead a = np.random.randn(5, 1) 
+  - instead a = np.random.randn(5, 1)
   - column vector: (m, 1)
   - row vector: (1, n)
 - add in assertions for shape
@@ -90,6 +90,6 @@
 
 ### Explanation of Logistic Regression Cost Function
 
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/logistic_cost_function_explanation.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/1_NeuralNetworksAndDeepLearning/week2/logistic_cost_function_explanation.png)
 - add in log and keep interpretation the same
 - by minimizing cost, we're really carrying out maximum likelihood estimation

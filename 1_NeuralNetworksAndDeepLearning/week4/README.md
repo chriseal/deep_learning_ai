@@ -2,18 +2,18 @@
 
 ## Notation in a deep layer
 
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week4/deep_nn_notation.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/1_NeuralNetworksAndDeepLearning/blob/master/week4/deep_nn_notation.png)
 
 ### Forward propagation in a deep network
 
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week4/forward_prop_deep.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/1_NeuralNetworksAndDeepLearning/week4/forward_prop_deep.png)
 
 ## Debugging: Dimensions
 
 - one training example
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week4/dimensions_one_training_example.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/1_NeuralNetworksAndDeepLearning/week4/dimensions_one_training_example.png)
 - vectorized example
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week4/vectorized_implementation.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/1_NeuralNetworksAndDeepLearning/week4/vectorized_implementation.png)
 
 ## Why deep representations?
 
@@ -24,15 +24,15 @@
 
 ## Building blocks - forward and backward
 
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week4/forward_and_back_io.png)
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week4/forward_and_back_io_2.png)
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week4/generalized_backward_prop.png)
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/week4/backward_ex.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/1_NeuralNetworksAndDeepLearning/week4/forward_and_back_io.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/1_NeuralNetworksAndDeepLearning/week4/forward_and_back_io_2.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/1_NeuralNetworksAndDeepLearning/week4/generalized_backward_prop.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/1_NeuralNetworksAndDeepLearning/week4/backward_ex.png)
 
 ## Parameters vs. Hyperparameters
 
 - Parameters: W<sup>[1]</sup>, b<sup>[1]</sup>, W<sup>[2]</sup>, b<sup>[2]</sup>
-- Hyperparameters: 
+- Hyperparameters:
   - parameters that determine the real parameters
   - learning rate - alpha
     - determines how parameters evolve
