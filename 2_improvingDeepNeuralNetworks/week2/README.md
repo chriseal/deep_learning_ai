@@ -9,3 +9,23 @@
 - 1 epoch is a single pass though the training set
   - with mini-batch, you'd take 5000 updates to params
   - with full batch, you'd update params 1 time with each epoch
+
+## Understanding mini-batch gradient descent
+
+- if cost function goes up at any point in full-batch, your learning rate is probably too high
+- mini-batch gradient descent looks more jagged (still trends downwards)
+- minibatch size
+  - =m : full batch; takes too long on larger training sets
+  - =1 : stochastic gradient descent
+    - won't ever converge, but will get close to optimum and hang around
+    - probably use smaller learning rate
+    - lose all speed-up from vectorization (still slow)
+  - >1 and < m:
+    - best of both worlds
+- Rules of thumb
+  - if m < ~2k: use full batch
+  - typical minibatch sizes: a power of 2 is faster
+    - 64, 128, 256, 512 <- most common
+    - make sure mini-batch fits in CPU/GPU (otherwise, performance will drop off a cliff)
+  - can be used as another hyperparameter
+
