@@ -110,7 +110,34 @@
   - Early stopping combines 1 and 2 in one step, which complicates the search space
   - Ng uses L2 regularization instead, is better, but takes more time bc bigger search space
   
+## Normalizing inputs
 
+- speeds up training of model
+1) subtract the mean
+2) normalize variance 
+- use same mean and stancard deviation to scale train and test set similarly
+- why normalize?
+  - without normalization, cost function curve could be very spread out, which takes longer to optimize
+    - might need very small learning rate (bc a lot of steps)
+  - with normalization, cost function looks more symmetric
+    - gradient descent can often take bigger steps
+
+## Vanishing / Exploding gradients
+
+- say you're training a very deep NN
+- in very deep NN's, weights are kinda getting multiplied with each hidden layer 
+  - extreme case: W<sup>[L]</sup> --> each individual weight will be ~weight<sub>[L-1]</sub><sup>L-1</sup>
+  - derivatives can also increase/decrease exponentially
+  
+## Weight Initialization for Deep Networks
+
+- can help prevent vanishing/exploding gradients
+- the larger number of inputs -> the smaller each weight should be, because you're adding them up
+- one thing to do: set variance of W<sub>i</sub> = 1/n
+  - 2/n better for ReLu
+  - tanh - use Xavier initialization
+  - just gives you a starting point, sometimes you can try this as a hyperparameter (sometimes can be helpuful)
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/one%20step%20of%20gradient%20descent%20pseudo%20code.png)
 
 
 
