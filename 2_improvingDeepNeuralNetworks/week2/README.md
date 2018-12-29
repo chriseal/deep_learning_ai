@@ -71,6 +71,15 @@
 - can be best when combined with momentum
 - similar benefits to momentum
 
+## Adam optimization algorithm
+
+- adaptive moment estimation
+- stood test of time across a variety of verticals
+- B<sub>1</sub> - momentum, first moment
+- B<sub>2</sub> - RMS prop, second moment
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week2/2wk2_adam_optimization.png)
+- tend to use defaults for B<sub>1</sub> (0.9) and B<sub>2</sub> (0.999), Epsilon (10<sup>-8</sup>, but doesn't affect it much)
+- most people use alpha as a hyperparameter but defaults on the other 
 
 
 
