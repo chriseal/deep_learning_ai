@@ -160,6 +160,16 @@
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week1/2wk1_gradient_checking.png)
 
 
+## Gradient Checking Implementation Notes
+
+- only use in debug; turn off in model training
+- find which values are very far off (could be all in db, for example)... all items very far off could be in db but dW could be just fine and vv
+- remember regularization in calculating gradients
+- doesn't work with dropout
+- run at random initialization (when W and b are close to zero), possibly double check after some training time, when W and b have had some time to wander away from zero (Ng doesn't do this very often in practice)
+
+
+
 
 
 
