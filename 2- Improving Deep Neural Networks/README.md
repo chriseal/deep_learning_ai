@@ -29,3 +29,24 @@
   - say training set error is much lower than dev set error
 - Optimal Error / Bayes Error: ex. compared to human performance
 - it's possible to get high bias in some areas and high variance in other areas in higher dimensional space
+
+## Basic Recipe for Machine Learning
+
+- High bias?
+  - low training data performance
+  - bigger network, train longer, (possibly, NN architecture)
+  - try this until you get rid of bias problem
+- High variance?
+  - low dev set performance
+  - get more data, try regularization, (possibly, NN architecture)
+- "Bias / variance tradeoff"  
+  - no longer as important, if you can always train a bigger network (reduce bias) or get more data (reduce variance) independently
+  - much less tradeoff bw b/v in deep learning
+  - if you're regularizing, a bigger network almost never hurts
+  
+## How to apply regularization
+
+
+
+
+
