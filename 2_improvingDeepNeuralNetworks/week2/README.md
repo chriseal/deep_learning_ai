@@ -29,3 +29,25 @@
     - make sure mini-batch fits in CPU/GPU (otherwise, performance will drop off a cliff)
   - can be used as another hyperparameter
 
+## Exponentially weighted averages
+
+- needed to go faster than mini-batch
+- moving average ish
+- V<sub>t</sub> = Beta * theta<sub>t-1</sub> + (1-Beta) * theta<sub>t</sub>; beta is scalar
+  - V<sub>t</sub> approximately averages over 1 / (1-beta)
+  - if beta = 0.9, it's ~ avg over past 10 data points
+  
+## Understanding exponentially weighted averages
+
+- takes very little memory, computationally cheap, 1 line of code
+- not most accurate way, but much more efficient
+
+## Bias Correction in exponentially weighted averages
+
+- 
+
+
+
+
+
+
