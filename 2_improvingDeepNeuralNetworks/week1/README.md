@@ -137,10 +137,27 @@
   - 2/n better for ReLu
   - tanh - use Xavier initialization
   - just gives you a starting point, sometimes you can try this as a hyperparameter (sometimes can be helpuful)
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/week2/one%20step%20of%20gradient%20descent%20pseudo%20code.png)
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week1/2wk1_scaling_weights_initialization_in_hidden_layers.png)
 
 
+## Numerical approximation of gradients
 
+- checking your derivate
+- epsilon is how much you move in a direction to test/approximate gradient
+- test derivative by moving both to the right and to the left
+  - use a bigger triangle to test gradient to make derivative approximation more accurate
+  - twice as slow as one-sided test, but Ng thinks it's worth it
+- exponentially more accurate to take 2-sided difference versus 1-sided difference
+
+## Gradient checking
+
+- has helped Ng save lots of time
+- take all W's and b's, reshape into big vector `theta`
+- reshape all dW's and db's into one big vector `dtheta`
+- Is `dtheta` the gradient of the slope of the cost function J? 
+  - check use Euclidean distance (just square root, no squaring)
+  - make sure epsilon <= 10<sup>-7</sup>, 10<sup>-5</sup> *might* be okay, 10<sup>3</sup> is *not* okay
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week1/2wk1_gradient_checking.png)
 
 
 
