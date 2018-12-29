@@ -81,6 +81,16 @@
 - tend to use defaults for B<sub>1</sub> (0.9) and B<sub>2</sub> (0.999), Epsilon (10<sup>-8</sup>, but doesn't affect it much)
 - most people use alpha as a hyperparameter but defaults on the other 
 
+## Learning rate decay
+
+- learning rate gets smaller as interations increase
+- alpha = 1 / (1 + decay_rate * epoch_num) * alpha<sub>0</sub>
+- decay_rate can be a hyperparameter, lower down the list of hyperparameters to optimize
+- alpha<sub>0</sub> can be a hyperparameter, lower down the list of hyperparameters to optimize
+- can use exponential decay
+
+##
+
 
 
 
