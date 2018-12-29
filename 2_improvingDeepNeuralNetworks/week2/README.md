@@ -44,7 +44,31 @@
 
 ## Bias Correction in exponentially weighted averages
 
-- 
+- exponentially weighted averages start out too low, bc prev data points are missing
+  - initial phase inaccurate
+- V<sub>t</sub> / (1 - beta<sup>t</sup>)
+- people don't often bother to implement bias correction, but it's an option
+
+## Gradient descent with momentum
+
+- compute exponentially weighted moving gradient descent
+- is almost always faster
+- learning rate has to be small if not using momentum, so gradient doesn't overshoot optimum
+  - V<sub>dW</sub> = Beta * V<sub>dw</sub> + (1-Beta) * dW
+  - V<sub>db</sub> = Beta * V<sub>db</sub> + (1-Beta) * db
+  V<sub>dw</sub> is velocity, dW is acceleration, Beta is friction
+- smoothes out gradient
+  - W := W - alpha * V<sub>dW</sub>
+  - b := b - alphba * V<sub>db</sub>
+- Beta = 0.9 works very well
+  - no need for bias correction since only looking at last 10 examples ish
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week2/2wk2_momemtum_implementation_formulas.png)
+
+## RMSprop - Root Mean Squared prop
+
+
+
+
 
 
 
