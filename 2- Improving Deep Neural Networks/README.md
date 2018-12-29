@@ -80,6 +80,41 @@
 - making predictions at test time, don't use dropout, because weights already have dropout affected by dropout in training
   - because you've already rescaled during training with dropout
   
+## Understanding Dropout / Why does dropout work?
+
+- intuition is it can't rely on any one feature - spreads out the weights, similar effect to shrinking the weights
+- dropout can be formally be shown to be adaptive
+- similar effect to L2, but dropout with L2 can be even more adaptive to the scale
+- can have keep_prob vary inversely with the size of each hidden layer 
+  - intuition being that if hidden layer has 300 units, you can drop half of them more easily than if the hidden layer has 2 units
+- technically, you can apply dropout to input layer, but in practice, this doesn't happen that often
+- can only apply dropout to some layers not others to speed up training time / searches
+- if you don't have a variance problem, might not be a need to use dropout
+- harder to detect Cost function
+  --> turn off dropout first to make sure cost function is reducing with every/almost every iteration
+    - then, once you're sure about that / less likely for bugs, start implementing dropout
+  
+## Other regularization methods
+
+- Data Augmentaion - adding more data / synthesizing data:
+  - flip images horizontally to get more data
+  - take random crops of an image
+  - inexpensive way to "add more data"
+  - add random permutations to digit images, for example... can use a more subtle distortion in practis
+- Early Stopping:
+  - plot dev set error with training set error
+  --> stop iterating when dev set loss is minimized
+- one downside:
+  - machine learning is: 1) optimize J, 2) not overfit
+    - Ng likes to focus on each step one at a time - "Orthogonalization"
+  - Early stopping combines 1 and 2 in one step, which complicates the search space
+  - Ng uses L2 regularization instead, is better, but takes more time bc bigger search space
+  
+
+
+
+
+
 
 
 
