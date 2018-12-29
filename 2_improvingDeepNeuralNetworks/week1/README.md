@@ -134,7 +134,7 @@
 - can help prevent vanishing/exploding gradients
 - the larger number of inputs -> the smaller each weight should be, because you're adding them up
 - one thing to do: set variance of W<sub>i</sub> = 1/n
-  - 2/n better for ReLu
+  - 2/n better for ReLu - He initialization
   - tanh - use Xavier initialization
   - just gives you a starting point, sometimes you can try this as a hyperparameter (sometimes can be helpuful)
 ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week1/2wk1_scaling_weights_initialization_in_hidden_layers.png)
