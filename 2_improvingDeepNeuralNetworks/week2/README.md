@@ -89,7 +89,18 @@
 - alpha<sub>0</sub> can be a hyperparameter, lower down the list of hyperparameters to optimize
 - can use exponential decay
 
-##
+## The problem of local optima
+
+- most points of 0 gradient are saddle points in higher dimensional space
+- very unlikely for all 20,000 features to be at zero at the same time
+- a saddle of a horse shape
+- low dimensional space intuition/issues don't translate to higher dimensional spaces as far as finding local optima goes
+- Plateaus are more of an issue
+  - very long plateau before finding a steeper slope
+  - can make learning very slow, but momentum, RMS, Adam all help with this
+
+
+
 
 
 
