@@ -66,8 +66,10 @@
 
 ## RMSprop - Root Mean Squared prop
 
-
-
+- another optimization algorithm
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week2/2wk2_rmsprop.png)
+- can be best when combined with momentum
+- similar benefits to momentum
 
 
 
