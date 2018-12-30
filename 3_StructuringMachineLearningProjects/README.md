@@ -33,3 +33,13 @@
   - e.g. dev set is US, test set is GB
   --> randomly shuffle data
 
+## Size of the dev and test sets
+
+- traditional:
+  - 70% train, 30% dev
+  - 60% train, 20% dev, 20% test
+  - not unreasonable with datasets <= 10K in size
+- big data, with m = 1M
+  - 98% train, 1% dev, 1% test
+- size of test set should be big enough to give high confidence in the overall performance of your system
+- not having a test set would be possible (though Ng finds it reassuring to have test set), but not totally unreasonable if dev set is big enough
