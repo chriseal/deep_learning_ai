@@ -106,16 +106,16 @@ beta = 1-10**r
 
 ## Deep learning frameworks
 
+- choosing deep learning framework
+  - ease of programming (research and production)
+  - running speed
+  - truly open (open source with good governance)
+    - how much do you trust it will remain open source for a long time (vs. overseen by a company)?
 
+## TensorFlow
 
-
-
-
-
-
-
-
-
+- TensorFlow automatically computes backpropagation steps when computing computation graph of cost function
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week3/2wk3_tensorflow_code_example.png)
 
 
 
