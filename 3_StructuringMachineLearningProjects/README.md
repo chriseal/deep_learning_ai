@@ -55,4 +55,20 @@
   - example: high quality images in training data, production has lower quality web uploads
 - Ng: even if you can't define perfect evaluation metric, still come up with one and you can change it later  , because it helps so much to improve iteration speed
 
+## Why compare to human-level performance?
 
+- Bayes Optimal Error: best possible error, best possible function to map from X to Y
+- performance improvements slow down after surpassing human level performance
+  1 - human level performance is not that far from Bayes Optimal Error
+  2 - tools to use to improve performance are less after performance surpasses human level performance
+    - get labeled data from humans 
+    - gain insight from manual error analysis: why did this person get it right?
+    - better bias/variance analysis
+    
+## Avoidable bias
+
+- say, human error is 1%, dev is 10%, training error is 8% (avoidable bias is 7%) --> try to reduce bias
+- say, human error is 7.5%, dev is 10%, training error is 8% (avoidable bias is 0.5%) --> try to reduce variance to bring dev error closer to train error
+- human level error used as a proxy for Bayes error
+  - works for image classification
+- *Avoidable Bias*: difference between training error and Bayes error
