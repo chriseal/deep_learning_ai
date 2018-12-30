@@ -86,6 +86,19 @@ beta = 1-10**r
   
 ## Softmax Regression
 
+- multiclass classification
+- C = number of classes
+- output layer has C hidden units, each of which maps to one class
+- vectorized activation function
+- generalization of linear regression
+  - when used without any previous hidden layers: linear boundary between any two classes 
+  - in NN, decision boundary can be much more complex
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week3/2wk3_softmax.png)
+
+## Training a softmax classifier
+
+
+
 
 
 
