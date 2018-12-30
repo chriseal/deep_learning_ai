@@ -50,10 +50,13 @@ beta = 1-10**r
 - normalize activations of a hidden layer to make training of following layer more efficient (normalize a<sup>L</sup>)
   - tend to normalize Z<sup>L</sup> (use this as a default choice, but some debate over which to normalize Z or A)
 - don't want hidden units to always have uniform distributions (might be less predictive)
+  --> add beta (no relation to optimization beta) and gamma that are tunable params
+  Z~ = gamma * Z + beta
+  - can use Gradient Descent, Adam, RMS Prop, etc, to update beta and gamma
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week3/2wk3_batch_norm.png)
-
-
-
+- when using minibatch, you implement batch norm within each respective minibatch (not globally)
+- when using batch norm, you don't need b constants, because of beta in batch norm
+- Z<sup>L</sup>, beta<sup>L</sup>, gamma<sup>L</sup> : (n<sup>L</sup>, 1)
 
 
 
