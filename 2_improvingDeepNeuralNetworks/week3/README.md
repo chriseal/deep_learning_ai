@@ -97,6 +97,17 @@ beta = 1-10**r
 
 ## Training a softmax classifier
 
+- "hard max" is a vector of 0's and 1's
+- softmax reduces to logistic regression if C == 2
+- Loss function:
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week3/2wk3_softmax_cost.png)
+- backpropagation:
+  - dZ<sup>[L]</sup> = y_hat - y
+
+## Deep learning frameworks
+
+
+
 
 
 
