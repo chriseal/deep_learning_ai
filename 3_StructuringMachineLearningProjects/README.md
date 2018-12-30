@@ -95,3 +95,11 @@
   - some speech recognition
   - some image recognition
 
+## Improving your model performance
+
+1 - fit training set pretty well
+  - Avoidable bias - bigger network, longer/better optimization algorithms (RMS Prop, Adam), better architecture/hyperparameters
+2 - training set performances generalizes well to dev/test set
+  - variance - regularization (L2, dropout, data augmentation), more data, NN architecture
+- systematically improve performance of model (rather than shotgun approach)
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week1/3wk1_toolbox_to_improve.png)
