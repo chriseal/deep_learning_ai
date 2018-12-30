@@ -16,15 +16,33 @@
 
 - alpha could be on a log scale instead of linear
   - use this code for alpha:
-```r = -4 * np.random.rand()
-alpha = 10**r```
+```
+r = -4 * np.random.rand()
+alpha = 10**r
+```
 
 - sampling beta for exponentially weighted averages
   - beta between 0.9...0.999 (0.9 last 10 samples, 0.999 last 1000 samples)
-```r = -2*np.random.rand() - 1 # r from -3 to -1
-beta = 1-10**r``
+```
+r = -2*np.random.rand() - 1 # r from -3 to -1
+beta = 1-10**r
+```
+
   - when beta close to 1, it has a huge impact on exactly what your algorithm is doing
   - this method samples more densely when beta is closer to 1, where the impact of small changes is greater
+
+## Hyperparameters tuning in practice: Pandas vs. Caviar
+
+- retest hyperparameters every few months
+- babysitting one model:
+  - watch model every day and make nudges to learning rate, etc
+  - pandas have one baby at a time and take great care of it
+- train many models in parallel
+  - test a lot of hyperparameter settings and pick which one looks best
+  - caviar: have 1000s of babies and hope some work out
+- if you have enough computers, take Caviar approach
+- without enough computers, take Panda approach
+
 
 
 
