@@ -72,3 +72,26 @@
 - human level error used as a proxy for Bayes error
   - works for image classification
 - *Avoidable Bias*: difference between training error and Bayes error
+- Variance: difference between training error and dev error
+
+## Understanding human-level performance
+
+- human level error can be a proxy for Bayes error
+- what is human level error ? laymen, experts, team of experts?
+  - theoretical optimum is team of experts, so that's human level performance
+
+## Surpassing human-level performance
+
+- problems where ML surpasses humans
+  - online advertising placements
+  - product recommendations
+  - logistics transit time
+  - loan approval
+- not natural perception tasks (NLP, image recognition), 
+- structured data
+- lots of data (more than human can examine)
+- some natural perception tasks that have surpassed humans
+  - some medical radiology
+  - some speech recognition
+  - some image recognition
+
