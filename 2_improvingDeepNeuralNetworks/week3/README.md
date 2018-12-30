@@ -4,7 +4,7 @@
 
 - number of parameters to tune is very difficult thing with NN's
 - red: most important (by far), yellow: 2nd tier, purple: 3rd tier, Ng doesn't tune betas and epsilon when using Adam Optimizer
-- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week3/2wk3_adam_optimization.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week3/2wk3_hyperparam_priority.png)
 - try random values, don't use a grid
   - hard to know which params will be most important combinations
   - if you have alpha in a gridsearch, you could be searching over another non-important parameter while keeping alpha the same (wasting time)
@@ -42,6 +42,16 @@ beta = 1-10**r
   - caviar: have 1000s of babies and hope some work out
 - if you have enough computers, take Caviar approach
 - without enough computers, take Panda approach
+
+## Normalizing activations in a network / Batch Normalization
+
+- very important / helpful
+- normalize inputs to speed up learning (normalize X)
+- normalize activations of a hidden layer to make training of following layer more efficient (normalize a<sup>L</sup>)
+  - tend to normalize Z<sup>L</sup> (use this as a default choice, but some debate over which to normalize Z or A)
+- don't want hidden units to always have uniform distributions (might be less predictive)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/2_improvingDeepNeuralNetworks/week3/2wk3_batch_norm.png)
+
 
 
 
