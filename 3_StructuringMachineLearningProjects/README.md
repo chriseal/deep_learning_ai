@@ -43,3 +43,16 @@
   - 98% train, 1% dev, 1% test
 - size of test set should be big enough to give high confidence in the overall performance of your system
 - not having a test set would be possible (though Ng finds it reassuring to have test set), but not totally unreasonable if dev set is big enough
+
+## When to change dev/test sets and metrics
+
+- changing evaluation metric midway through a project
+- add weight term to change importance of weight of certain examples (e.g. high weight for pornographic images)
+- don't keep coasting with an incorrect evaluation metric
+1 - define the target / evaluation metric
+2 - how to aim at the target, cost or loss
+- a model could do better on dev/test set, but worse in production if the two aren't from same distribution 
+  - example: high quality images in training data, production has lower quality web uploads
+- Ng: even if you can't define perfect evaluation metric, still come up with one and you can change it later  , because it helps so much to improve iteration speed
+
+
