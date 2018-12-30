@@ -58,6 +58,40 @@ beta = 1-10**r
 - when using batch norm, you don't need b constants, because of beta in batch norm
 - Z<sup>L</sup>, beta<sup>L</sup>, gamma<sup>L</sup> : (n<sup>L</sup>, 1)
 
+## Why does Batch Norm work?
+
+- scaling features speeds up training, just like when scaling input features
+- more robust to changes to weights earlier on in the network
+  - this can make the model more generalizable
+    - e.g. training on all black cats, but testing on colored cats
+ - "covariate shift": even if ground truth function remains the same, your X may only account for part of it
+  - Activations are always changing, which makes it harder for subsequent layer (covariate shift)
+  - Batch Norm reduces the amount activations change which limits the covariate shift / makes it easier for batch norm
+  - Activations become more stable, so deeper layers can learn more "independently" 
+  - speeds up training
+- Batch Norm as regularization
+  - if using mini-batch, mean/variance of Z's only calculated on mini-batch
+  - adds some subtractive noise (mean centering); additive noise (constant added)
+  - slight regularization effect
+  - with bigger mini-batch size, you reduce the noise and regularization effect
+  - but intent isn't for regularization; don't use it for just regularization
+  - this is similar to dropout and has a sli
+
+## Batch Norm at test time
+
+- at training time, batches are normalized independently with each mini-batch
+- so what to do at test time?
+  - estimate mean and standard deviation using exponentially weighted average across minibatches
+  - could also retrain model on whole dataset, but exponentially weighted average is pretty robust, so the latter is typically done in practice
+  
+## Softmax Regression
+
+
+
+
+
+
+
 
 
 
