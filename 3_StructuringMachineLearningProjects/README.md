@@ -27,4 +27,9 @@
   - care about accuracy and false positives
   --> maximize accuracy, at most 1 FP every 24H
   
-  
+## how to set up Train/dev/test distributions
+
+- make sure dev and test sets come from the same distribution
+  - e.g. dev set is US, test set is GB
+  --> randomly shuffle data
+
