@@ -69,5 +69,13 @@
 
 ## One Layer of a Convolutional Network
 
+- add in bias term to each convolution (real number) 
+  - apply elementwise to resulting image
+  - apply relu to resulting matrix
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_convolution_layer.png)
+- convolutions can guard against overfitting, because no matter how many X feature you have, after applying convolutions, your resulting layer will always have same number of parameters to learn
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_convolution_layer_num_params.png)
+- height and width (and all channels) have same formula for shape
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_convolution_summary_of_notation.png)
 
 
