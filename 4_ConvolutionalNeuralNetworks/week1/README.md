@@ -78,4 +78,9 @@
 - height and width (and all channels) have same formula for shape
 - ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_convolution_summary_of_notation.png)
 
+## Simple Convolutional Network Example
+
+- structure of a convolutional NN, example
+  - 37 comes from (n+2P-f)/s+1
+
 
