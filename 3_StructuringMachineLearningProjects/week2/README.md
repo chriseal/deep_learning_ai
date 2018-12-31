@@ -124,3 +124,33 @@
   - computer vision could be a notable exception
 ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_multitask_learning_use_cases.png)
 
+## What is end-to-end deep learning?
+
+- exciting area of research in deep learning
+- end-to-end deep learning takes multiple steps and puts it into one big NN
+- one of the challenges is you might need a lot of data for it to work well
+- 3K hours of data <-- traditional approach
+- 10K-1000H <-- end-to-end might be better
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_end_to_end_speech_recognition_ex.png)
+- face recognition example, mult-step
+  - 1) recognize face location
+  - 2) identify face
+  - researchers have found this break down to be easier
+  - works if you have a lot of data for each subtask, but not necessarily enough labeled data for end-to-end task
+- works well for 
+- end-to-end approach works well for:
+  - machine translation- possible to get a lot of (x,y) pairs for (english, french)
+- end-to-end approach does not work well for:
+  - estimating child's age - multi-step has better labeled data pairs
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_end_to_end_use_cases.png)
+- pros of end-to-end approach:
+  - let's the data speak, rather than being forced to reflect human intuition/bias
+  - less hand-designing of components needed
+- cons of end-to-end approach:
+  - may need a large amount of data for end-to-end task (as much/more than subtasks)
+  - excludes potentially hand-designed components (a way to inject manual knowledge, which is not always a bad thing)
+    - without a ton of data, hand-designed components could be very useful
+- key question: do you have sufficient data to learn the complexity needed to map from x to y
+  - more complex problems need more labeled data
+- pure end-to-end learning doesn't work as well in autonomous driving than breaking steps down into structured approach
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_end_to_end_examples.png)
