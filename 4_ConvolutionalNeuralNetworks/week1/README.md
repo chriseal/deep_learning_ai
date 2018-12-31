@@ -119,4 +119,17 @@
 - Activation size tends to gradually get smaller the deeper you go into NN, common trend
 - ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_conv_typical_structure_param_chart.png)
 
+## Why Convolutions?
+
+- number of connection in FC layer with large image vector input would be unfeasibly large
+- reduces complexity of model
+- **parameter sharing**: if vertical edge detection is useful in one part of image, it will be helpful in another part of an image
+  - moves features all around the image
+- **sparsity of connections**: each layer depends only on a small number of inputs (because of filtering , 33 filter only takes into account 9 input features)
+- conv: can be trained with smaller datasets
+- conv: less prone to overfitting
+- translation invariance: cat moving from one location in image to another 
+  - conv' account for this because you're applying the same feature all around the image
+- same cost function as previous models (gradient descent, momentum, rms prop, adam)
+
 
