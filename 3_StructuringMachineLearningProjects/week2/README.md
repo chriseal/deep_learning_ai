@@ -107,6 +107,20 @@
 ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_transfer_learning_use_cases.png)  
 - transfer learning can significantly help your performance if used in the right case
 
-
+## Multi-task learning
   
+- In multi-task learning, you start off simultaneously, trying to have one neural network do several things at the same time. And then each of these task helps hopefully all of the other task
+- similar to softmax regression, but one image can have multiple labels
+- cost function looks like this: exactly the same as binary classification, but for each class separately
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_multitask_learning_cost.png)
+- but sometimes, there are missing y values, jus
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_multitask_learning_cost_w_missing_labels.png)
+- when to use multi-task labels
+  - similar low-level features
+  - usually: similar amount of data for each task
+  - if you can train a NN big enough to do well on all the tasks
+    - only time multi-task learning hurts performance is when you don't have a big enough NN
+- transfer learning much more common in practice than multi-class (bc often don't have huge dataset)
+  - computer vision could be a notable exception
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_multitask_learning_use_cases.png)
 
