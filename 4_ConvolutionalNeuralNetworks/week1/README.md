@@ -5,6 +5,15 @@
 
 ## Edge Detection Example
 
+- filter:
+  - contruct a matrix that looks with 1s, 0s, and -1s
+  - use * to denote convolution, but in python, it means multplication
+- 6x6 image * 3x3 filter = 4x4 resulting image (-1 from each side)
+  - elementwise product of image and filter in each place filter will fit
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_convolution_visual.png)
+- detected image seems thicker in resulting image after convolution
 
+## More Edge Detection
 
-- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/deep_nn_notation.png)
+- light to dark, dark to right
+
