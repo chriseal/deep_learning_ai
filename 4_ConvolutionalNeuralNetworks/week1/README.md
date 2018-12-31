@@ -105,3 +105,18 @@
   - very deep NN may use this for data compression
 - no padding used in max pooling, p = 0 by far most common choice
 - floor [ (n_h - f)+ 1 ] x floor [ (n_x - f)+ 1 ]
+
+## CNN Example
+
+- inspired by LeNet-5
+- different conventions about number of layers when using max-pooling
+  - but max pooling has no parameters, so we're going to just combine conv-1 and pool-1 as one layer-1
+- reasonably typical structure
+  - Conv+MaxPool --> Conv2+MaxPool2 --> (flatten) --> FC3 --> FC4 --> softmax
+- use architecture that has worked for someone else
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_conv_typical_structure.png)
+- number of HxW dimensions gets smaller, number of channels gets larger as you go deeper into NN
+- Activation size tends to gradually get smaller the deeper you go into NN, common trend
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_conv_typical_structure_param_chart.png)
+
+
