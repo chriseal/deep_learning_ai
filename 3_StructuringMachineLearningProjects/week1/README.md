@@ -1,5 +1,5 @@
-# Structuring Machine Learning Projects 
-# Week 3
+# Structuring Machine Learning Projects
+# Week 1
 
 ## Orthogonalization
 
@@ -12,10 +12,10 @@
 ## Single number evaluation metric
 
 - quickly tell if the thing you tried works better or not
-- at the beginning of a project, decide on single, real-valued metric to assess model 
-- for example, use F1-Score = 2 / (1/Precision + 1/Recall) 
+- at the beginning of a project, decide on single, real-valued metric to assess model
+- for example, use F1-Score = 2 / (1/Precision + 1/Recall)
   - harmonic mean of precision and recall
-  
+
 ## Satisficing and Optimizing metric
 
 - what if you care about accuracy and running time?
@@ -26,7 +26,7 @@
 - trigger words in Alexa
   - care about accuracy and false positives
   --> maximize accuracy, at most 1 FP every 24H
-  
+
 ## how to set up Train/dev/test distributions
 
 - make sure dev and test sets come from the same distribution
@@ -51,7 +51,7 @@
 - don't keep coasting with an incorrect evaluation metric
 1 - define the target / evaluation metric
 2 - how to aim at the target, cost or loss
-- a model could do better on dev/test set, but worse in production if the two aren't from same distribution 
+- a model could do better on dev/test set, but worse in production if the two aren't from same distribution
   - example: high quality images in training data, production has lower quality web uploads
 - Ng: even if you can't define perfect evaluation metric, still come up with one and you can change it later  , because it helps so much to improve iteration speed
 
@@ -61,10 +61,10 @@
 - performance improvements slow down after surpassing human level performance
   1 - human level performance is not that far from Bayes Optimal Error
   2 - tools to use to improve performance are less after performance surpasses human level performance
-    - get labeled data from humans 
+    - get labeled data from humans
     - gain insight from manual error analysis: why did this person get it right?
     - better bias/variance analysis
-    
+
 ## Avoidable bias
 
 - say, human error is 1%, dev is 10%, training error is 8% (avoidable bias is 7%) --> try to reduce bias
@@ -87,7 +87,7 @@
   - product recommendations
   - logistics transit time
   - loan approval
-- not natural perception tasks (NLP, image recognition), 
+- not natural perception tasks (NLP, image recognition),
 - structured data
 - lots of data (more than human can examine)
 - some natural perception tasks that have surpassed humans
