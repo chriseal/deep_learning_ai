@@ -90,3 +90,23 @@
       - possible to overfit to the way the cars are rendered
       - same issue if you got car images from video games
  - speech recognition, Ng: "I've seen artificial data synthesis significantly boost the performance of what were already very good speech recognition system"
+ 
+## Transfer learning
+
+- have a model that recognizes images, then transfer model and retrain it to a radiology dataset (or other image subset)
+- if small radiology dataset: retrain only last layer of model
+- if large radiology dataset: possibly retrain all hidden layers in model
+- pre-training vs. fine-tuning:
+  - pre-training: un-retrained layers
+  - fine-tuning: retrained layers with new dataset
+- e.g. start with speech recognition model, then retrain for a trigger word
+  - could take out last layer and retrain it and/or add more layers too
+- when does transfer learning make sense?
+  - if you have a lot of data in the global population but small amount in your use case (but not v.v.)
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_transfer_learning_examples.png)  
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_transfer_learning_use_cases.png)  
+- transfer learning can significantly help your performance if used in the right case
+
+
+  
+
