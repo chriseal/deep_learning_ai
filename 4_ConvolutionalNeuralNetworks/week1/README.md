@@ -16,4 +16,8 @@
 ## More Edge Detection
 
 - light to dark, dark to right
+  - changes from all positive edge values after convolution to all negative edge values after convolution
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_convolution_vertical_and_horizontal_filters.png)
+- sobel filter and schars filter or you can optimize convolution parameters with backprop (tends to work better)
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_convolution_filter_options.png)
 
