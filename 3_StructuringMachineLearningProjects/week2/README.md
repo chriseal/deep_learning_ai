@@ -76,4 +76,17 @@
 ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_bias_variance_mismatch_sheet.png)
 - filling out 2 top right cells can give you additional insight (image below)
 
-## 
+## Addressing data mismatch
+
+- what if you have a data mismatch problem? no simple way to know what to do next
+- carry out manual error analysis to try to understand how train and dev are different
+  - e.g. train is conversational speech, dev is addresses and directions (more often)
+- make training data more similar to dev set
+  - data synthesis
+    - e.g. add clean speech to car noise and add reverb to synthesize data inside the car
+    - what if you have 1H of car noise and 10000H of speech?
+      - possible to overfit to 1H of car noise if you repeat it 10,000 times
+    - e.g. could synthesize pictures of cars using visual rendering systems
+      - possible to overfit to the way the cars are rendered
+      - same issue if you got car images from video games
+ - speech recognition, Ng: "I've seen artificial data synthesis significantly boost the performance of what were already very good speech recognition system"
