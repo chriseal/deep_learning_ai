@@ -73,7 +73,7 @@
 - data mismatch problem:
   - model does well on train, training_dev but poorly on dev <-- data mismatch error
 - Avoidable Bias, Variance and Data Mismatch to take into account now
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_bias_variance_mismatch_sheet.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_bias_variance_mismatch_sheet.png)
 - filling out 2 top right cells can give you additional insight (image below)
 
 ## Addressing data mismatch
@@ -103,8 +103,8 @@
   - could take out last layer and retrain it and/or add more layers too
 - when does transfer learning make sense?
   - if you have a lot of data in the global population but small amount in your use case (but not v.v.)
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_transfer_learning_examples.png)  
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_transfer_learning_use_cases.png)  
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_transfer_learning_examples.png)  
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_transfer_learning_use_cases.png)  
 - transfer learning can significantly help your performance if used in the right case
 
 ## Multi-task learning
@@ -112,9 +112,9 @@
 - In multi-task learning, you start off simultaneously, trying to have one neural network do several things at the same time. And then each of these task helps hopefully all of the other task
 - similar to softmax regression, but one image can have multiple labels
 - cost function looks like this: exactly the same as binary classification, but for each class separately
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_multitask_learning_cost.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_multitask_learning_cost.png)
 - but sometimes, there are missing y values, jus
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_multitask_learning_cost_w_missing_labels.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_multitask_learning_cost_w_missing_labels.png)
 - when to use multi-task labels
   - similar low-level features
   - usually: similar amount of data for each task
@@ -122,7 +122,7 @@
     - only time multi-task learning hurts performance is when you don't have a big enough NN
 - transfer learning much more common in practice than multi-class (bc often don't have huge dataset)
   - computer vision could be a notable exception
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_multitask_learning_use_cases.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_multitask_learning_use_cases.png)
 
 ## What is end-to-end deep learning?
 
@@ -131,7 +131,7 @@
 - one of the challenges is you might need a lot of data for it to work well
 - 3K hours of data <-- traditional approach
 - 10K-1000H <-- end-to-end might be better
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_end_to_end_speech_recognition_ex.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_end_to_end_speech_recognition_ex.png)
 - face recognition example, mult-step
   - 1) recognize face location
   - 2) identify face
@@ -142,7 +142,7 @@
   - machine translation- possible to get a lot of (x,y) pairs for (english, french)
 - end-to-end approach does not work well for:
   - estimating child's age - multi-step has better labeled data pairs
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_end_to_end_use_cases.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_end_to_end_use_cases.png)
 - pros of end-to-end approach:
   - let's the data speak, rather than being forced to reflect human intuition/bias
   - less hand-designing of components needed
@@ -153,4 +153,4 @@
 - key question: do you have sufficient data to learn the complexity needed to map from x to y
   - more complex problems need more labeled data
 - pure end-to-end learning doesn't work as well in autonomous driving than breaking steps down into structured approach
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_end_to_end_examples.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_end_to_end_examples.png)
