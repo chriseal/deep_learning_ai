@@ -88,3 +88,20 @@
 - ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_convolution_typical_structure.png)
 - most NN's have a few pooling and a few fully connected layers in addition to convolutional layer
 
+## Pooling Layers
+
+- max pooling
+  - each of output of filter is biggest number in eaach region 
+- hyperparameters are f/filter and s/stride in pooling layer
+  - f = 2, s = 2 are common choices
+    - has the affect of reducing H and W by half
+  - f=3, s=2 sometimes used
+- if this feature is detected anywhere in the filtering layer, it's still accounted for
+- but it works well, and regardless of theoretical discussion 
+- no parameters, but does have f and s as hyperparameters
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_max_pooling_explanation.png)
+- max pooling computation is calculated independently on each channel
+- average pooling used rarely
+  - very deep NN may use this for data compression
+- no padding used in max pooling, p = 0 by far most common choice
+- floor [ (n_h - f)+ 1 ] x floor [ (n_x - f)+ 1 ]
