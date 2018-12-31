@@ -78,9 +78,13 @@
 - height and width (and all channels) have same formula for shape
 - ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_convolution_summary_of_notation.png)
 
-## Simple Convolutional Network Example
+## Simple Convolutional Network Example, ConvNet
 
 - structure of a convolutional NN, example
   - 37 comes from (n+2P-f)/s+1
-
+- a typical structure of convolutional NN
+- as you go deeper in NN, dimensions of images will gradually scale down
+- flatten last layer and input into logistic regression
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week1/4wk1_convolution_typical_structure.png)
+- most NN's have a few pooling and a few fully connected layers in addition to convolutional layer
 
