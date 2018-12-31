@@ -13,7 +13,7 @@
   - but if 50 pics are dogs, then your ceiling goes from 10% error to 5% error and it's probably a worthwhile effort
 - evaluate multiple ideas in parallel
   - create a table/spreadsheet that counts up fraction of mislabeled examples of each case and make notes 
-![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week1/3wk2_error_analysis_spreadsheet.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_error_analysis_spreadsheet.png)
 
 ## Cleaning up incorrectly labeled data
 
@@ -34,4 +34,46 @@
     - if training set comes from slightly different distribution than 
 - very important to manually review examples, in order to determine priority for improvementa
 
+## Build your first system quickly, then iterate
 
+- lots of directions you could go
+- build initial system quickly 
+  - a lot of the value of the initial system is that it gives you a way to conduct error analysis
+- use Bias/Variance analysis and Error analysis to prioritize next steps
+- most teams overthink initial solution
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_speech_detection_error_analysis_example.png)
+
+## Training and testing on different distributions
+
+- because models are hungry for tons of data, more often, people are training on a different distribution than testing on
+- if you can get 200K examples from webcrawling and 10K from mobile apps, but your model is for predicting images in mobile apps
+  - Option 1: combine both datasets, shuffle them, and distribute into train, dev, test
+    - major drawback: aiming for mostly webcrawling distribution, which isn't what you want
+  - Option 2 (recommended):
+    - train - 200K from webcrawling, 5K from mobile app
+    - dev, test - 2.5K from mobile app
+    - aiming in the right place is what you want
+- Example: speech recognition for cars
+  - training: purchased data, smart speaker control, voice keyboard -> 500K utterances
+  - dev/test: 20K speech activated rear view mirror (use case)
+  --> training - 500K+10K
+  --> dev/test - each 5K of use case data
+  
+## Bias and Variance with mismatched data distributions
+
+- estimating Bias and Variance changes when train and dev/test are from different distributions
+- maybe dev set is just much harder to predict if train is cleaner data
+- could higher error in dev set 
+- when going from training error to dev error, two things change at a time
+  - 1) algorithm saw data in training data but not in dev set (variance)
+  - 2) distribution of train and dev data is different
+- create training_dev set: same distribution as training set, but not used for training
+  - so train, training_dev (same distribution) and dev, test (different distribution)
+  - this helps determine if you have a bias or variance problem
+- data mismatch problem:
+  - model does well on train, training_dev but poorly on dev <-- data mismatch error
+- Avoidable Bias, Variance and Data Mismatch to take into account now
+![img](https://github.com/chriseal/deep_learning_ai/blob/master/3_StructuringMachineLearningProjects/week2/3wk2_bias_variance_mismatch_sheet.png)
+- filling out 2 top right cells can give you additional insight (image below)
+
+## 
