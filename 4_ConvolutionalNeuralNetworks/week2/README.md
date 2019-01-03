@@ -80,6 +80,34 @@
 (https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week2/4wk2_inception_network.png)
 - has many variations... combining this with resnet can sometimes produce better results
 
+## Using Open-Source Implementation
+
+## Transfer Learning
+
+- can download open source weights from someone who's spent weeks or months and many GPU's to come up with
+- can speed up progress
+- if you have more data, the number of layers you freeze could be smaller and the number of layers you train could be larger
+- can also just use the weights as initialization (if you have a lot of data) 
+  - with different softmax output of course
+  
+## Data Augmentation
+
+- almost all computer vision tasks, having more data will help
+- very common technique in computer vision
+- true whether you're using transfer learning or training from scratch
+- flip vertically 
+- random cropping - not a perfect method, but in practice it works as long as subset is big enough representation of the image itself
+- rotation, shearing, local warping <- acceptable but used less
+- color shifting - add +20R, -20G, +20B for example... in reality, you'd draw from random samples
+  - PCA color augmentation - adjusts color relative to existing ratios
+- can implement distortions in real time during training stage
+- has its own set of hyperparameters
+  - use someone else's open-source solution to start out
+  
+
+
+
+
 
 
 
