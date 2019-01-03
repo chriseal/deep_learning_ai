@@ -56,9 +56,29 @@
 - pooling filters shrinks n_h and h_w
 - 1x1 convolution shrinks n_c
 - adds nonlinearity
+- (1 x 1 x n_channels) in previous layer, and apply as many filters as you want
 - allows your network to learn more complicated functions, due to introduction of non-linearity 
 - ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week2/4wk2_1x1_conv.png)
 
+## Inception Network Motivation
+
+- inception layer
+  - stack different convolution sizes
+  - do all pooling sizes
+  - Szedy et al 2014
+- comes at a computational cost
+  - using a 1x1 convolution as an intermediate step can reduce computation cost by a factor of 10
+    - aka, a 'bottleneck' layer
+  - adding a 1x1xn_c intermediate convolution layer doesn't seem to hurt performance
+  
+## Inception Network
+
+- one inception module:
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week2/4wk2_inception_module.png)
+- adds a softmax layer at intermediate layers to ensure the features are decent at predicting the target variable
+  - this adds a bit of a regularization effect which reduces overfitting
+(https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week2/4wk2_inception_network.png)
+- has many variations... combining this with resnet can sometimes produce better results
 
 
 
