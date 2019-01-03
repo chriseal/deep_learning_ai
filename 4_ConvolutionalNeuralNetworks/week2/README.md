@@ -77,7 +77,7 @@
 - ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week2/4wk2_inception_module.png)
 - adds a softmax layer at intermediate layers to ensure the features are decent at predicting the target variable
   - this adds a bit of a regularization effect which reduces overfitting
-(https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week2/4wk2_inception_network.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week2/4wk2_inception_network.png)
 - has many variations... combining this with resnet can sometimes produce better results
 
 ## Using Open-Source Implementation
@@ -104,14 +104,11 @@
 - has its own set of hyperparameters
   - use someone else's open-source solution to start out
   
+## State of Computer Vision
 
-
-
-
-
-
-
-
-
-
-
+- ![img](https://github.com/chriseal/deep_learning_ai/4_ConvolutionalNeuralNetworks/blob/master/week2/4wk2_data_vs_transfer_learning.png)
+- ensembling almost never used in production because of added cost of predction; taking the average of 3-15 indepentently trained models
+- multi-crop at test time
+  - take multiple crops of an image and average the results
+  - apply data augmentation to test set
+- start out with someone else's architecture, open source implementations, pretrained models
