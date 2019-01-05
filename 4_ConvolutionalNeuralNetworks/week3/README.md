@@ -91,7 +91,43 @@
 - "correct if IoU >= 0.5 (0.5 is just a convention... you could use 0.6, etc... Ng rarely sees people drop it below 9.5)
 - measures how similar two boxes are to each other
 
+## Non-max Suppression
 
+- makes sure your algorithm detects each unique object only once
+- multiple grid cells may think they've found the car
+- running image classification and localization algorithm on every grid cell
+- possible that many grid cells have p_c large (probability of an object)
+- non-max suppression cleans up these multi-detections
+- first takes largest p_c and then looks at nearby high p_c's with high amount of overlap with first area
+  - gets rid of any other positive predictions with a high IoU with the highest p_c prediction
+- 19x19 grid cell --> 19x19x8 target/y variable for each image
+  - discard all boxes with p_c <= 0.6 (or 0.5 or whatever)
+  - discard any remaining boxes with IoU >= 0.5 with currently chosen box
+  - does this for each class 
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week3/4wk3_nonMaxSuppresion.png)
+
+## Anchor Boxes
+
+- What if you want to predict multiple objects in one grid cell?
+  - Anchor boxes help with this
+- overlapping objects
+  - predefine two different shapes/anchor box
+    - anchor box 1, anchor box 2, ... anchor box number of objects you want to predict in each grid
+  - use anchor box most similar to object type to relate one anchor box to one category of classification for each given image independently
+    - e.g. use horizontal anchor box for a car and vertical anchor box for a human for a given image
+- pick which anchor box has a higher IoU with actual object
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week3/4wk3_anchor_box_algorithm.png)
+- this algorithm doesn't handle more objects in a grid cell than coded into algorithm (use a tiebreaker code)
+  - doesn't happen much
+- this algorithm also doesn't handle two objects with same shape in grid cell (use a tie breaker)
+- pro: allows learning algorithm to specialize in predicting certain kinds of shapes
+  - some outputs are great at predicting vertical shapes, some great at predicting horizontal shapes, etc
+- can use a K-Means algorithm to choose which anchor boxes you use, based off of labeled data
+  - shapes that more closely match your training set
+
+## YOLO Algorithm
+
+- 
 
 
 
