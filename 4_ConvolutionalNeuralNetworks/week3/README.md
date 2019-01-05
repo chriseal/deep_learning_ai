@@ -84,6 +84,19 @@
   - there are slightly better ways to label these examples, using YOLO paper recommendations, but they are much more complicated
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week3/4wk3_boundary_box_labels.png)
 
+## Intersection Over Union (IoU)
+
+- IoU computes the overlapping area bw truth and predicted boundary boxes
+- size of overlap / size of predicted area
+- "correct if IoU >= 0.5 (0.5 is just a convention... you could use 0.6, etc... Ng rarely sees people drop it below 9.5)
+- measures how similar two boxes are to each other
+
+
+
+
+
+
+
 
 
 
