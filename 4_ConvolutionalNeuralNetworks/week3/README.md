@@ -127,16 +127,27 @@
 
 ## YOLO Algorithm
 
-- 
+- output shape is:
+  - height of image, width of image, (# of anchors, 5+# of choices (object types you're classifying))
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week3/4wk3_yolo_making_predictions.png)
+- numbers will be output for null y's, but you can ignore those
+- independently run non-max suppression for each class
+- YOLO is one of the best image classification algorithms, combining the best ideas across all of computer vision
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week3/4wk3_yolo_making_preds2.png)
 
+# Region proposal - R-CNN (optional)
 
-
-
-
-
-
-
-
-
-
-
+- Ng doesn't use this that much, but it still has an important body of work in image classification
+- runs a segmentation algorithm to decide what could be objects
+- can reduce training time, especially if you're using anchor boxes with different shapes and/or at multiple scales
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week3/4wk3_region_proposal_explanation.png)
+- R-CNN algorithm is still quite slow
+  - classify proposed regions one at a time
+  - output label + bounding box that is independent of segmentation algorithm
+- Fast R-CNN
+  - R-CNN with convolutional implementation to classify all regions at once
+  - proposing regions segmentation is still slow
+- Faster R-CNN: use convolutional NN to propose regions
+- but all of these are still slower than YOLO
+- Ng thinks that region proposals are interesting, but likes 1-step YOLO over 2-step segmentation + classification
+  - better long term solution he thinks
