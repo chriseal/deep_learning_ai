@@ -68,4 +68,37 @@
 
 ## Different types of RNNs
 
-- 
+- this video inspired by the unreasonable effectiveness of RNNs
+- many-to-many architecture where len(X) matches len(y)
+- sentiment classification: many-to-one architecture
+- one-to-one architecture: standard NN
+- one-to-many architecture: music generation
+- many-to-many: input and output lengths can be different
+  - machine translation
+  - for a sentence, output a y array output of a translation
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_RNN_architectures.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_RNN_architectures2.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_RNN_architectures_summary.png)
+- there are some subtleties to one-to-many setup
+
+## Language model and sequence generation
+
+- RNNs are really good at this
+- what is the probability of the sentence? chooses most likely sentence in speech recognition
+- basic job is to input a sentence and estimate the probability of that sequence of words
+- steps
+  - tokenize words
+  - map to one-hot vectors
+  - add EOS token (end-of-sentence token)
+  - might ignore punctuation, but could include it too
+- what to do if word is not in dictionary
+  - use <UNK> token
+- at each step, RNN predicts probability of that word
+  - at first step, RNN is predicting probability the sentence starts with a given word
+  - at second step, give RNN the correct first word
+  - at step n, give RNN the correct preceeding words 
+- cost function
+  - take softmax loss at each step, and sum them up to get the Loss 
+- chance of entire sentence is multiplying out all probabilities output across all timesteps
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_language_model.png)
+
