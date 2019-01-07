@@ -173,3 +173,27 @@
     - pretty robust
     - other common unit is LStM
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_full_GRU.png)
+
+## Long Short Term Memory (LSTM)
+
+- even more powerful than GRU, slightly so
+- more general version than GRU
+- LStM vs GRU
+  - a_t != c_t
+  - gamma_u gets replaced by gamma_f (forget gate) and gamma_u
+    - can keep the old value and just add to it if it wants to
+  - new output gate: gamma_o
+  - three gates instead of two
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_gru_vs_lstm.png)
+- LStM in pictures
+  - Ng thinks equations easier to understand than pics
+  - relatively easy for c_0 to be passed further down to the right
+  - can add "peephole connection" to gate calculations to effect gate value indepently
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_lstm_pic.png)
+- no one model is best yet
+  - GRU is simpler model - computationally faster, scales to bigger networks slightly more easily
+  - LStM model: more powerful, more flexible, slightly slower
+    - historically more proven choice, default first thing to try 
+    - in recent years, GRUs are growing and more teams are trying them, bc simpler with just as good of results
+
+## Bidirectional RNN
