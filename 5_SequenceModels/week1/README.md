@@ -12,4 +12,12 @@
 ## Notation
 
 - Named entity recognition example
-- x<sup>\<t\></sup>
+- x<sup>\<t\></sup> implies a temporal sequence (but we'll use it even if it isn't a temporal sequence)
+- T_x : length of input sequence, (T_xi specific to ith training example)
+- T_y : length of output sequence, (T_yi specific to ith training example)
+- X<sup>(i)\<t\></sup> - t<sup>th</sup> element in i<sup>th</sup> training example
+- y<sup>(i)\<t\></sup> - t<sup>th</sup> element in i<sup>th</sup> training label
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_notation.png)
+- Representing words
+  - create a dictionary (30-50K common, 100K not uncommon)
+  
