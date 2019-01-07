@@ -122,4 +122,54 @@
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_language_model_char_level.png)
 - way to see kinda how well it's working
   
-  
+## Vanishing gradients with RNNs
+
+- basic RNN runs into vanishing gradient problems
+- language can have very long-term dependencies
+  - basic RNN not good at handling these, bc of vanishing/exploding gradient problem
+- exploding gradients might be easier to spot
+  - implement gradient clipping (max allowable value)
+  - relatively robust solution for exploding grads
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_vanishing_grad.png)
+
+## Gated Recurrent Unit (GRU)
+
+- variant of basic RNN 
+- helps with longer-term dependencies
+- helps with vanishing gradient problem
+- basic RNN
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_basic_RNN.png)
+- GRU
+  - c a new variable - memory cell
+  - at time t, memory cell will have c<sup>t</sup> value
+  - c<sup>t</sup> = a<sup>t</sup> (same in GRU, different in LStM)
+- consider overwriting c<sup>t</sup> with c_tilde<sup>t</sup>
+  - c_tilde<sup>t</sup> is a candidate for replacing c_t
+- update gate is a value bw 0 and 1
+  - key idea of GRU
+  - gamma_u
+  - for intuition, think of gamma_u as always 0 or 1 (although, in practice, it's the result of a sigmoid function)
+  - in most ranges, sigmoid is either very close to 0 or very close to 1
+  - say, gamma_u is 1 if pluraal or 0 if singular
+  - gate's job is to know when to remember or forget it's memory
+    - if it's remembering subject of a sentence, when to let go of that memory
+    - the CAt .... was full. <-- forget after was for singular/pluraral (knowing whether or not to use were or was)
+  - memorizing if "cat" was singular or not
+  - Ng thinks equations are easier to understand than infographics
+- remarkably good at updating memory cell at the appropriate point
+- bc gamma can be so close to zero, it doesn't suffer from vanishing gradient
+- long-range dependencies possible
+- c_t can be a vector, gamma, and c_tilde_t
+  - can choose to keep some bits constant and update other bits in a matrix of c
+  - so is updating and not updating some units at every step
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_basic_RNN.png)
+- Full GRU
+  - just one new variable
+  - gamma_r - this gate gamma r tells you how relevant is c<t> minus one to computing the next candidate for c<t>
+  - gamma_r is best setup after many many years of research of the design of these units
+  - GRU is one of most commonly used units
+    - researchers have converged to this
+    - standard, common used in practice
+    - pretty robust
+    - other common unit is LStM
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_full_GRU.png)
