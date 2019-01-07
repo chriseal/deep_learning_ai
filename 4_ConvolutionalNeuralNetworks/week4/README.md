@@ -95,6 +95,29 @@ live face detection (is a picture or a live human)
 
 ## Style Cost Function
 
+- in a given layer, how "correlated" are G's activations across channels 
+  - really unnormalized cross covariance
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_neural_style_transfer_style_cost_intro.png)
+- but why does this capture style?
+- which high level features (vertical texture, orange tint, etc) occur together
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_neural_style_transfer_style_cost_intuition.png)
+- Style Matrix
+  - multiply elementwise across channels in G
+  - if elements are both high, result is high; and vv if elements are both low
+  - outputs matrix of size n_channels x n_channels
+  - "gram matrix" in a math textbook
+- compute Style Matrix for S and G both
+- take the sum of squares of elementwise differences between the style matrices of S and G
+- constant multiplier isn't that important bc you're using a constant as a hyperparameter anyway
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_neural_style_transfer_style_cost_style_matrix.png)
+- can do this across different layers to incorporate both low and high level features in style cost function
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_neural_style_transfer_style_cost_function.png)
+
+## 1D and 3D Generalizations
+
+
+
+
 
 
 
