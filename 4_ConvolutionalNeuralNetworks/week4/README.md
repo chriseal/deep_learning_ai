@@ -55,6 +55,37 @@ live face detection (is a picture or a live human)
 - or could use Chi Squared Similarity for loss function
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_similarity_function.png)
 
+## What is neural style transfer?
+
+- Generate image in same style as Van Gogh, say
+- Content (C) + Style (S) --> Generated Image (G)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_neural_style_transfer.png)
+
+## What are deep ConvNets learning?
+
+- 9 representative neurons and 9 image patches that maximize their activations from each
+- Layer 1 images:
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_layer_1_images.png)
+- deeper layers see more of the image
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_layer_1_images_big.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_layer_2_images_big.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_layer_3_images_big.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_layer_4_images_big.png)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_layer_5_images_big.png)
+
+## Cost Function
+
+- cost function for neural style transfer
+  - how good of a generated image is it?
+  - how similar is content of G to content of C?
+  - how similar is style of G to style of S?
+  - with hyperparameters alpha and beta
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_neural_style_transfer_cost.png)
+- G starts as random, then you minimize cost/J to iteratively get better image
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_neural_style_transfer_gradient.png)
+- 
+
+## Content Cost Function
 
 
 
