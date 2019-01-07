@@ -55,3 +55,17 @@
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_simplified_notation.png)
 
 ## Backpropagation through time
+
+- this is often done automatically in programming frameworks
+- W_a and b_a are same parameters used for every step
+  - same for W_y and b_y
+- can use any loss
+  - categorical cross entropy
+  - compute loss at every time step
+  - total Loss is sum of loss at every timestep
+  - most significant calculation for backprop is activation params
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_backprop_through_time.png)
+
+## Different types of RNNs
+
+- 
