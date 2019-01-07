@@ -83,9 +83,19 @@ live face detection (is a picture or a live human)
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_neural_style_transfer_cost.png)
 - G starts as random, then you minimize cost/J to iteratively get better image
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_neural_style_transfer_gradient.png)
-- 
 
 ## Content Cost Function
+
+- hidden layer l is usually somewhere in the middle for content cost
+  - is l was too early on in NN, content would have to match original too closely
+  - in contrast, i l was at the end, content would have to match too loosely
+- use a pre-trained ConvNet (e.g. VGG)
+- take: elementwise squared difference bw C and G in layer l / 2 (L2 norm)... elementwise Sum of Squared differences
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_neural_style_transfer_content_cost.png)
+
+## Style Cost Function
+
+
 
 
 
