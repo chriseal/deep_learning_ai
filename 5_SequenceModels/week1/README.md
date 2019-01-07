@@ -25,3 +25,33 @@
   - create token called unnamed word to represent words not in your vocabulary 
   
 ## Recurrent Neural Network Model
+
+- why not a standard network?
+  - doesn't work well
+  - inputs and outputs can be different length
+  - doesn't share features learned across different positions of text (harry in token1 versus token5898)
+  - better representation can reduce number of parameters
+- recurrent neural networks
+  - reading sentence from left to right
+  - take first word and try to predict output
+  - when reading second word, instead of just predicting y_2, it gets y_1's activation value (or some information)
+  - initialize a_0 randomly is most common choice for time zero activation
+  - RNN - scans through data from L to R
+  - parameters are shared for each timestamp 
+  - image structure doesn't look forward and this is a problem (bi-directional RNN's fix this)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_structure.png)
+- Forward Propogation
+  - a_0 all zeros
+  - W_ax <-- x means W is transforming some x-like quantity, a means W is being used to compute some a-like quantity
+  - typically, a tanh is used as an activation, instead of ReLU (though ReLU is still used) as we have other ways of addressing vanishing gradient proglem
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_forward_propogation.png)
+- simplifying the notation:
+  - concatenate horizontally W_aa and W_ax
+  - [...] is a vector of shape (10.1K, 1)
+    - a_\<t-1\> is (100, 1) vector
+    - x_\<t\> is (10K, 1) vector
+  - W_a is a matrix of shape (100, 10.1K)
+  - this compresses notation so we go from W_aa and W_ax / two parameter matrices, to W_a and a vector, so one parameter matrix
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_simplified_notation.png)
+
+## Backpropagation through time
