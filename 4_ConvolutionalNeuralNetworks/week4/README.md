@@ -115,10 +115,17 @@ live face detection (is a picture or a live human)
 
 ## 1D and 3D Generalizations
 
-
-
-
-
+- apply Convolution learnings to 1D or 3D data (non-images)
+- 1D (e.g. time-series)
+  - convolution applies to varies parts of time-series data
+  - similar shape rules of convolution, channel, number of filters
+  - ppl often use recurrent NN's in this cas
+  - with 16 filters...
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_1d_convnet.png)
+- 3D (Ct scan, movie data across time)
+  - has HxWxDepth
+  - H, W and D can be different (doesn't have to be a square/cube)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/4_ConvolutionalNeuralNetworks/week4/4wk4_3d_convnet.png)
 
 
 
