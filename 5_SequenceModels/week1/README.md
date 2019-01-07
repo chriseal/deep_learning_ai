@@ -12,4 +12,4 @@
 ## Notation
 
 - Named entity recognition example
-- x<sup><t></sup>
+- x<sup>\<t\></sup>
