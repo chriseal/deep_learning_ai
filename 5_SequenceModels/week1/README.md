@@ -102,3 +102,24 @@
 - chance of entire sentence is multiplying out all probabilities output across all timesteps
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_language_model.png)
 
+## Sampling novel sequences
+
+- can be fun 
+- informally get a sense of what your model has learned
+- randomly sample from softmax distribution at activation layer 1
+- input chosen word from previous layer into next layer
+- stop when EOS token is reached, or if not included, just cap it at a number of words
+- sometimes, it can generate <UNK> token
+    - can just remove <UNK> if you want and choose another word instead
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_language_model_sampling_randomly.png)
+- character-level RNN
+  - sequence would be characters instead of words
+  - can include caps and lowercase
+  - pros: never have to worry about unknown word tokens
+  - cons: main disadvantage is much longer sequences, so they're not as good at capturing long-range dependencies
+- mostly word-level representations are used
+- as computational power increases, more specialized applications are using character level representations more and more
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_language_model_char_level.png)
+- way to see kinda how well it's working
+  
+  
