@@ -19,5 +19,9 @@
 - y<sup>(i)\<t\></sup> - t<sup>th</sup> element in i<sup>th</sup> training label
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_notation.png)
 - Representing words
-  - create a dictionary (30-50K common, 100K not uncommon)
+  - create a dictionary (in production: 30-50K common, 100K not uncommon)
+  - choose 10K most common words
+  - use one-hot representation of each word (0s and 1s)
+  - create token called unnamed word to represent words not in your vocabulary 
   
+## Recurrent Neural Network Model
