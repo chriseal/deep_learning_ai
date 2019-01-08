@@ -150,3 +150,22 @@ NLP
   - not necessarily orthogonal axes
   - but parallelogram map for figuring out analogies still works
 
+## Sentiment Classification
+
+- with word embeddings, you're able to build good sentiment classifiers even with only modest-size label training sets
+- may not have a large training set
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_sentiment_training_set.png)
+- can apply embeddings to words that weren't in your training / labeled dataset
+- you can take the average or some of the word embeddings of the text
+- works for reviews that are short or large
+- con: ignores word order "completely lacking in *good* service"
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_sentiment_simple_mod.png)
+- instead of averaging, you can use a many-to-one RNN
+  - input word embeddings as x's
+  - since word embeddings use a large dataset, this algorithm will generalize better bc of transferred knowledge
+  - can still deal with words that weren't in your traning set, but were in embeddings (that you stole)
+  
+## Debiasing word embeddings
+
+- 
+
