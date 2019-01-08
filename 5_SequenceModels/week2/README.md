@@ -80,5 +80,54 @@ NLP
   - context: nearby 1 word, works surprisingly well
     - skip-gram model
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_other_contexts.png)
-- 
+
+## Word2Vec
+
+- thomas Mikolov
+- **SkipGram model**
+- randomly pick a word that's within +/- n (5,10,etc) words before or after
+- goal isn't to do well on the supervised learning 
+- theta_t is probability of word t
+- matrix E has a lot of parameters
+- problem:
+  - computational speed, if vocab is 10K, summing over denominator is very slow 
+  - even harder to increase vocab size
+- hierarchical softmax
+  - fixes computational cost 
+  - split vocab into halves in each node in a tree
+  - computational cost scales at log(vocab_size) rather than linearly with vocab size
+  - doesn't use a symmetric split at every node
+  - bury rare words deeper in the tree
+  - most common words higher up in the tree
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_hierarchical_softmax.png)
+- negative sampling 
+  - simpler than hierarchical softmax
+- how to sample context c
+  - reduce sampling of frequently occuring words
+  - increase sampling of rarer words
+  - various hieristics to improve sampling
+- Skip-Gram and CBOW (continuous bag of words, takes surrounding words)
+        
+## Negative Sampling
+
+- defining a new learning problem
+  - sample a context of words randomly from a dictionary/vocab as incorrect words
+    - okay if randomly selected words come from context area around original word
+  - correct word is target word
+  - define correct as 1's and 0's for incorrect target words
+  - turn into a supervised problem
+  - k is 5-20 for smaller datasets
+  - k is 2-5 for larger datasets
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_generating_supervised.png)
+- K-to-1 ratio of negative to positive examples
+- instead of calculating binary cost at each word in vocab, for each prediction
+  - you are instead calculating loss for 1+k binary cost calculations
+- this technique is called negative sampling
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_negative_sampling.png)
+- but how to sample negative words?
+  - uniformly random, sampling in ratio of usage <-- doesn't work
+  - take frequency of occurence of word_i to the 3/4 is what worked best empirically in the study
+  - this is somewhere between uniformly random sampling and sampling in ratio of usage
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_how_to_sample.png)
+
 
