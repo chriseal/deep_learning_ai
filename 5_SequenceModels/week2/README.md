@@ -1,6 +1,4 @@
-# Sequence Models - Week 2
-
-NLP
+# Sequence Models - Week 2 - NLP
 
 ## Word Representation
 
