@@ -130,4 +130,23 @@ NLP
   - this is somewhere between uniformly random sampling and sampling in ratio of usage
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_how_to_sample.png)
 
+## GloVe word vectors (global vectors for word representation)
+
+- GloVe algorithm has some enthusiasm
+- not used quite as much as skip-gram or word2vec algorithms, but still common
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_GloVe.png)
+- x_ij counts co-occurences of i and j in context of each other (however you define context)
+- minimize difference bw...
+  - theta and e_j terms measure how related two words are given the co-occurence in context
+  - f(x_ij) is weighting term = 0 when no co-occurences
+  - "0 * log 0" = 0
+  - weighting factor gives reasonable weight to rare words
+  - gives frequent words not too much weight
+  - e and theta are symmetric
+  - final e is mean of e and theta for a given word
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_GloVe_cost.png)
+- individual dimensions may not be interpretable (cannot guarantee interpretability)
+- can't guarantee that axis used to represent the features will be well-aligned with what would be easily interpretable
+  - not necessarily orthogonal axes
+  - but parallelogram map for figuring out analogies still works
 
