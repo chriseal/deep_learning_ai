@@ -57,3 +57,28 @@ NLP
 - can also use Euclidean distance, but it's not used as much as cosine similarity
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_cosine_similarity.png)
 
+## Embedding matrix
+
+- 300 x 10K (or vocab size)
+- in practice, you'd use a function to pull the appropriate column, since matmul is less efficient
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_embedding_matrix.png)
+
+## Learning word embeddings
+
+- used to have complicated models, but now, simpler models work if you have a lot of data
+- neural language model
+  - earlier model and pretty effective for word embeddings
+  - reasonable way to learn word embeddings
+  - moving window as a parameter --> only look at last 4 words
+    - 300*4 = 1200 length feature vector input into model
+  - need similar features for similar words to predict what the next word is - e.g. "apple *juice*", "orange *juice*"
+  - context: last 4 words
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_neural_language_model.png)
+- if goal isn't a language model, you can change your context
+  - context: 4 words on L and 4 words on R, input concatenated embeddings into NN 
+  - context: 1 word on L
+  - context: nearby 1 word, works surprisingly well
+    - skip-gram model
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_other_contexts.png)
+- 
+
