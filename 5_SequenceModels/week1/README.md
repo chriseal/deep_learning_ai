@@ -211,4 +211,14 @@
 - disadvantage: need full sequence bf making predictions
   - need entire utterance bf making speech recognition model (for standard BRNN, more complex models are used that incorporate BRNN's somehow)
 
+## Deep RNNs
 
+- Deep RNN with 3 hidden layers, example
+  - each box in this chart has two inputs
+  - unique set of parameters shared across each layer, but unique across layers
+  - deep RNN's having 3 layers is already quite a lot
+    - RNN's not usually 100 layers etc
+    - but could have deep network that isn't RNN tagged onto each y output
+- each block can be GRU or LStM
+- can have BRNN's in there
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_deep_rnn.png)
