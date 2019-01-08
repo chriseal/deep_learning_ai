@@ -38,4 +38,22 @@ NLP
 
 ## Properties of word embeddings
 
+- analogies are important aspect of word embeddings
+- take elementwise difference bw wdEmb's
+- when queen is input into equation, lHand side more closely matches RHand side
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_analogies.png)
+- formalizing the implementation...
+- find word that maximizes similarity bw emb_x and e_king-e_man+e_woman
+- remarkable thing is this actually works
+- 30-75% accuracy in analogies in research paper, counting only if you get the exact word right
+- parallelogram relationships in analogies only work in 300D space..t-sne's non-linear transformation doesn't make it a reliable way to view analogies
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_analogies_explained.png)
+- Cosine Similarity:
+  - numerator: inner product bw two vectors
+    - if they're similar, the numerator will be large
+  - angle of 0: cosine = 1
+  - angle of 90: cosine = 0.5
+  - angle of 180 (opposite): cosine = 0
+- can also use Euclidean distance, but it's not used as much as cosine similarity
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_cosine_similarity.png)
 
