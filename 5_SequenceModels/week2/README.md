@@ -167,5 +167,15 @@ NLP
   
 ## Debiasing word embeddings
 
-- 
-
+- embeddings pick up the biases in text used to train the model
+- more easy to reduce bias in AI than reduce bias in human race
+1. identify bias direction
+  - take a few differences and average them
+  - this tells you the bias direction/axis
+2. for every word that is not definitional (e.g. unrelated to gender), project along axis to get rid of bias
+  - how do you decide which words to use?
+  - train a classifier to determine which words should be gender specific (most words are not definitional in english)
+3. equalize pairs
+  - e.g. make grandmother and grandfather equidistant from babysitter
+  - relatively small number of pairs, possible to handpick pairs you want to neutralize
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week2/5wk2_addressing_bias.png)
