@@ -197,3 +197,18 @@
     - in recent years, GRUs are growing and more teams are trying them, bc simpler with just as good of results
 
 ## Bidirectional RNN
+
+- gets information from past and future
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_teddy.png)
+- Bi-RNN with 4 sentence input, example
+  - defines an acyclic graph
+  - forward propogation that goes backwards (right to left) too
+  - can be GRU or LStM can be used
+  - LStM is most common with NLP BRNN tasks
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week1/5wk1_brnn.png)
+- basic change to GRU or LStM model where you include all events in sequence
+- pretty effective if you have full sequence
+- disadvantage: need full sequence bf making predictions
+  - need entire utterance bf making speech recognition model (for standard BRNN, more complex models are used that incorporate BRNN's somehow)
+
+
