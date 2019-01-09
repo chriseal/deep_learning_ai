@@ -79,3 +79,20 @@
 - error analysis is one of most important ways of improving algorithm (some simple things can help)
 
 ## Error analysis in beam search
+
+- how do determine if beam search or RNN is causing errors?
+- always tempting to increase beam width
+- compare probabilities computed by RNN to probabilities computed by beam search to determine which was bigger in order to determine next steps / ascribe particular error to RNN or beam search
+- y<sup>*</sup> is human translation, y<sup>^</sup> is beam search y
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_beamW_error_analysis.png)
+- case 1: if prob human translation is higher than beam search prob, beam search is at fault
+- case 2: if beam search prob is gte human translation prob, RNN is at fault
+- need to take into account length normalization to do this properly
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_beamW_error_analysis2.png)
+- go through dev set and find the mistakes, determining which RNN or BS is at fault
+- carry out error analysis to figure out fraction of errors due to RNN (or BS)
+- only if you find BS is responsible for most of the errors do you increase beam width
+- in contrast, if RNN is at fault, do a deeper error analysis related to RNN (see Week 3)
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_beamW_error_analysis3.png)
+
+
