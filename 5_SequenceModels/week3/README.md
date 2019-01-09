@@ -51,3 +51,31 @@
 - terminates with EOS tag
 - if Beam_width = 1, it will become greedy search discussed above
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_beam_search2.png)
+
+## Refinements to Beam Search
+
+- Length normalization
+  - small change that can get much better results
+  - numerical underflow an issue by raw multiplication of a lot of small numbers
+  - in practice, we take logs
+  - the log of a product becomes the sum of the logs
+  --> numerically stable algorithm less prone to rounding errors
+  - maximizing log should be the same as maximizing non-log, since log is monotonically increasing
+  - without length normalization, probabilities of a short sentence is higher than longer sentence (log or no log) so w-out normalization the algorithm unnaturally prefers shorter sentences
+  --> normalize probability by length of sentence
+  - divide by t_y<sup>alpha</sup> where alpha is a parameter
+  - alpha is a hack/hieuristic that works well in practice... try a few in practice and see what works best
+  - you see a lot of sentences with length 1,2,3 and run it all the way up to 30 length
+  - look at all output sentences and score them with cost function on the bottom of the img
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_length_normalization.png)
+- choosing beam width length
+  - performance vs computational cost trade off
+  - common to see beam width of 10 in production
+  - 100 high, but seen in some production systems
+  - 1000 for some some research applications
+  - diminishing returns: huge gains going 1-10, less so higher up
+  - beam search isn't guaranteed to find exact maximum, but runs much faster than bread first search or depth first search
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_beam_width_param_choosing.png)
+- error analysis is one of most important ways of improving algorithm (some simple things can help)
+
+## Error analysis in beam search
