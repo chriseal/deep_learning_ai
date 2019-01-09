@@ -95,4 +95,25 @@
 - in contrast, if RNN is at fault, do a deeper error analysis related to RNN (see Week 3)
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_beamW_error_analysis3.png)
 
+## Bleu Score (optional)
 
+- multiple equally good answers in machine translation
+- how do you evaluate machine translation system if there are multiple acceptable/equally good answers
+- Bleu score (Bilingual evaluation understudy)
+  - automatically computes a score of a translation
+  - as long as translation is close to a human generated reference (as part of dev/test sets)
+  - "understudy" for having humans review every translation
+  - precision: if machine translation in human refs, what fraction of words that you predicted are in refs
+  - modified precision: "the" gets credit up to the max number of times "the" is in one of the human generated refs
+- bigrams portion of blue score:
+  - compute modified precision for bigrams
+  - sum of matching bigrams / sum of bigrams in machine translation
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_bleu_score.png)
+- perfect score is exactly matching translation
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_bleu_score2.png)
+- BP = brevity penalty
+  - penalizes if machine translation length is less than human translation length
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_bleu_score3.png)
+- useful single evaluation metric --> moved progress forward
+- not used in speech recognition (bc only 1 right answer)
+- used in machine translation and image captioning
