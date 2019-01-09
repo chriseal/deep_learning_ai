@@ -117,3 +117,23 @@
 - useful single evaluation metric --> moved progress forward
 - not used in speech recognition (bc only 1 right answer)
 - used in machine translation and image captioning
+
+## Attention Model Intuition
+
+- works better than encoder / decoder
+- very important idea in ML
+- encoder / decoder "memorizes" entire sentence and then translates/decodes it from scratch
+- encoder / decoder works well for short sentences but is bad for longer sentences (hard for it to "memorize" it all)
+- attention model is green line of performance below
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_attention_issue.png)
+- attention model is very influential paper - Bahdanau et al 2014 "neural machine translation by jointly learning ..."
+- BRNN
+- attention model computes attention weights
+- in first word, you don't need to be looking way at the end of the sentence
+- alpha<sup>(1,1)</sup>, alpha<sup>(1,2)</sup>....alpha<sup>(1,len_text)</sup>
+- for first word, this combination of weights determines the context of the first word
+- new alpha array / context for second word and so on
+- activation depends on context of current row and state (s) of previous step
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_attention_intuition.png)
+
+## Attention Model
