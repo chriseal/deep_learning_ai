@@ -181,4 +181,9 @@
   - NN has 1000 outputs in this example, but CtC reduces effective output to reasonable characters/words
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_ctc_cost.png)
 
+## Trigger Word Detection
+
+- put a few ones after when trigger word was said
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_trigger_word_detection.png)
+
 
