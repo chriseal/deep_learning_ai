@@ -164,3 +164,21 @@
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_attention_examples.png)
 
 ## Speech recognition
+
+- audio clip to transcript
+- preprocessing - create a spectrogram from audio clip
+  - how loud is this sound at different frequencies at different times
+- no need for phonemes
+  - in academia, 3000H of audio would be reasonable
+  - in production systems, 100,000H of audio makes deep learning work better
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_speech_recognition_problem.png)
+- CtC cost for speech recognition works well
+  - Connectionist temporal classification
+  - in practice, will be Bi-GRU/LStM
+  - # input time steps is much larger than output
+  - collapse repeated characters not separated by blank
+  - skip blanks/underscores
+  - NN has 1000 outputs in this example, but CtC reduces effective output to reasonable characters/words
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_ctc_cost.png)
+
+
