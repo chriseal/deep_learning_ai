@@ -137,3 +137,30 @@
 - ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_attention_intuition.png)
 
 ## Attention Model
+
+- attention model allows NN to pay attention to only part of the sentence much like how a human translator would
+- a<sup\<6\></sup> for backprop is initialize as a vector of all zeros
+- a<sup\<t'\></sup> is the concatenated of forward occurence activations and backward occurence activations for BRNN of French sentence (original sentence)
+- alpha is the attention parameter, tells us how much the context will depend on the attention weights
+- C is weighted sum of attention and activations
+- alpha<sup>\<t, t'\></sup> is the amount of attention y<sup>\<t\></sup> should pay to a<sup>\<t'\></sup>
+  - when generating output y_t, how much attention should you be paying to the t' input word? (alpha tells you this)
+- alphas change for every input word
+- state and context (top left) look like a pretty 'normal' RNN predicting one word at a time
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_attention_model.png)
+- for every fixed value of t, alphas sum to 1 (see denominator in a_tt' equation
+- how to compute exponential values
+  - one way is to use a small NN
+  - only 1 hidden layer bc you calculate these a lot
+  - leave details to backprop
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_computing_alphas.png)
+- this actually works, learns to pay attention to the right things
+- takes quadratic cost to run this algorithm
+  - but in machine translation, most texts are pretty small
+- also applied to image captioning
+  - pays attention to parts of the picture at a time
+- date normalization
+- visualization of attention weights/alphas
+- ![img](https://github.com/chriseal/deep_learning_ai/blob/master/5_SequenceModels/week3/5wk3_attention_examples.png)
+
+## Speech recognition
